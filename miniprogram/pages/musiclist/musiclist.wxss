@@ -1,4 +1,8 @@
 .detail-container {
+  overflow: hidden;
+}
+
+.cover-img {
   height: 320rpx;
   filter: blur(40rpx);
   opacity: 0.4;
