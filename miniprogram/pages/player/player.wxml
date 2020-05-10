@@ -3,8 +3,10 @@
 
 <view class="player-info">
   <!-- 封面信息 -->
-  <view class="player-disc {{isPlaying?'play': ''}}" bind:tap="onChangeLyricShow" hidden="{{isLyricShow}}">
-    <image class="player-img rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}"></image>
+  <view class="cover-info" bind:tap="onChangeLyricShow">
+    <view class="player-disc {{isPlaying?'play': ''}}" hidden="{{isLyricShow}}">
+      <image class="player-img rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}"></image>
+    </view>
   </view>
 
   <!-- 歌词 -->

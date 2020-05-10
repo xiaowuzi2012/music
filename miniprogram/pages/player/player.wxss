@@ -64,7 +64,11 @@
   margin-top: -184rpx;
   margin-left: -184rpx;
 }
-
+.cover-info {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+}
 .control {
   position: absolute;
   bottom: 8%;
