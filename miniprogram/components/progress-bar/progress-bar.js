@@ -48,13 +48,14 @@ Component({
       }
     },
     onTouchEnd() {
-      const currentTimeFmt = this._dateFormat(Math.floor(backgroundAudioManager.currentTime))
+      const currentTime = duration * this.data.progress / 100
+      const currentTimeFmt = this._dateFormat(currentTime)
       this.setData({
         progress: this.data.progress,
         movableDis: this.data.movableDis,
         ['showTime.currentTime']: currentTimeFmt.min + ':' + currentTimeFmt.sec
       })
-      backgroundAudioManager.seek(duration * this.data.progress / 100)
+      backgroundAudioManager.seek(currentTime)
       isMoving = false
       // console.log('end', isMoving)
     },
