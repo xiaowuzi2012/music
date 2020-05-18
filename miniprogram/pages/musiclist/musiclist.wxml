@@ -9,4 +9,4 @@
   </view>
 </view>
 
-<x-musiclist musiclist="{{musiclist}}" />
+<x-musiclist musiclist="{{musiclist}}" id="musiclist"/>

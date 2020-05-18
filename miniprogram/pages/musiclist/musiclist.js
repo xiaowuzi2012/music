@@ -1,4 +1,5 @@
 // pages/musiclist/musiclist.js
+const app = getApp()
 Page({
 
   /**
@@ -51,7 +52,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let playingMusicId = app.getPlayMusicId() - 0
+    console.log(playingMusicId);
+    if (playingMusicId !== -1) {
+      let musicListComponent = this.selectComponent('#musiclist')
+      musicListComponent.setPlayingMusicId(playingMusicId)
+    }
   },
 
   /**

@@ -1,4 +1,3 @@
-// components/musiclist/musiclist.js
 Component({
   /**
    * 组件的属性列表
@@ -18,6 +17,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    setPlayingMusicId(musicid) {
+      this.setData({
+        playingId: musicid
+      })
+    },
     onSelect(event) {
       const dataset = event.currentTarget.dataset
       const musicid = dataset.musicid

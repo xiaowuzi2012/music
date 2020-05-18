@@ -108,7 +108,7 @@ Component({
         // console.log('onTimeUpdate')
         if (!isMoving) {
           const currentTime = backgroundAudioManager.currentTime
-          const duration = backgroundAudioManager.duration
+          duration = backgroundAudioManager.duration
           const sec = currentTime.toString().split('.')[0]
           if (sec != currentSec) {
             // console.log(currentTime)
